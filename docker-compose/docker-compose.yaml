@@ -1,4 +1,14 @@
 version: "3"
+
+volumes:
+  go-cache:
+    name: go-cache
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ./go-cache
+
 services:
   nginx:
     image: nginx:latest
@@ -24,6 +34,8 @@ services:
       - 8080
       - 8081
     restart: always
+    volumes:
+      - go-cache:/root/.cache/go-build
     networks:
       - default
 

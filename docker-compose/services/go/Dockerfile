@@ -12,6 +12,7 @@ RUN go mod download
 
 # 把全部文件添加到/go/release目录
 ADD . /data
+ADD ./docker-compose/go-cache /root/.cache/go-build
 
 # 编译：把cmd/main.go编译成可执行的二进制文件，命名为app
 RUN go build -o main main.go
