@@ -12,13 +12,13 @@ Etcd:
   Host: [chat-etcd-1:2379]
   BasePath: chat
 Mysql:
-  Database: ws
+  Database: customer-service
   Username: root
-  Password: 123456
+  Password: zyz22222
   Port: 3306
-  Host: chat-mysql
+  Host: 121.196.110.77
 Redis:
-  Addr: chat-redis:6379
+  Addr: 121.196.110.77:6379
   Auth:
   Db: 0
 Http:
