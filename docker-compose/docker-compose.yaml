@@ -1,12 +1,7 @@
 version: "3"
 services:
   nginx:
-    build:
-      context: ./services/nginx
-      args:
-        NGINX_VERSION: nginx:${NGINX_VERSION}
-        CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
-        NGINX_INSTALL_APPS: ${NGINX_INSTALL_APPS}
+    image: nginx:latest
     container_name: chat-nginx
     ports:
       - "81:80"
