@@ -1,7 +1,6 @@
 .idea
 vendor
 .env
-config.yaml
 *.pid
 ws
 main

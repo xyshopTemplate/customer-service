@@ -17,7 +17,8 @@ services:
  
   go:
     build:
-      dockerfile: ./services/go/Dockerfile
+      context: ..
+      dockerfile: ./docker-compose/services/go/Dockerfile
     container_name: go
     expose:
       - 8080
