@@ -23,8 +23,6 @@ services:
       - 8080
       - 8081
     restart: always
-    volumes:
-      - ./data/go:/data
     networks:
       - default
 

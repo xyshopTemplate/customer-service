@@ -5,7 +5,7 @@
     # 启动mysql然后手动创建数据库
     docker-compose up mysql
     # 构建
-    docker run -it --rm -v  $(pwd)/../:/data  docker-compose_go1  /bin/bash -c "go env -w  GOPROXY=https://goproxy.cn && go build main.go" && cp ../main ./data/go
+    docker run -it --rm -v  $(pwd)/../:/data  docker-compose_go  /bin/bash -c "go env -w  GOPROXY=https://goproxy.cn && go build main.go" && cp ../main ./data/go
     # 复制修改配置文件
     cp ../config.example.yaml ./data/go/config.yaml
     # 表迁移，填入假数据
