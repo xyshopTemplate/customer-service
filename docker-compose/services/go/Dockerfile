@@ -8,7 +8,7 @@ ENV GOPROXY=https://goproxy.cn,direct
 WORKDIR /data
 
 # 把全部文件添加到/go/release目录
-ADD ../ .
+ADD . /data
 
 # 编译：把cmd/main.go编译成可执行的二进制文件，命名为app
 RUN go build main.go

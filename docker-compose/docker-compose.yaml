@@ -7,17 +7,17 @@ services:
       - "81:80"
       - "444:443"
     volumes:
-      - ./services/nginx/ssl:/ssl:rw
-      - ./services/nginx/conf.d:/etc/nginx/conf.d/:rw
-      - ./services/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./logs/nginx:/var/log/nginx/:rw
+      - ./docker-compose/services/nginx/ssl:/ssl:rw
+      - ./docker-compose/services/nginx/conf.d:/etc/nginx/conf.d/:rw
+      - ./docker-compose/services/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./docker-compose/logs/nginx:/var/log/nginx/:rw
     restart: always
     networks:
       - default
  
   go:
     build:
-      context: ./services/go
+      dockerfile: ./docker-compose/services/go/Dockerfile
     container_name: go
     expose:
       - 8080
